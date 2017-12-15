@@ -13,16 +13,15 @@ public class Solution {
             int item = nums[index];
 
             IList<IList<int>> moreSubsets = new List<IList<int>>();
+
             foreach(var subSet in allSubSets) {
                 IList<int> s = new List<int>();
-                //s.AddRange(subSet);
                 ((List<int>)s).AddRange(subSet);
                 s.Add(item);
                 moreSubsets.Add(s);
             }
 
-            //allSubSets.Add(moreSubsets);
-            allSubSets.AddRange(moreSubsets);
+            ((List<IList<int>>)allSubSets).AddRange(moreSubsets);
         }
 
         return allSubSets;
