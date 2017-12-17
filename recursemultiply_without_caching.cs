@@ -1,6 +1,6 @@
 public class Solution
 {
-    private static int RecurseMultiplyWithoutCaching(int a, int b)
+    public static int RecurseMultiplyWithoutCaching(int a, int b)
     {
         int smaller = a > b ? b : a;
         int bigger = a > b ? a : b;
@@ -8,7 +8,7 @@ public class Solution
         return RecurseMultiplyWithoutCachingHelper(smaller, bigger);
     }
 
-    private static int RecurseMultiplyWithoutCachingHelper(int smaller, int bigger)
+    public static int RecurseMultiplyWithoutCachingHelper(int smaller, int bigger)
     {
         if (smaller == 0) return 0;
         if (smaller == 1) return bigger;
