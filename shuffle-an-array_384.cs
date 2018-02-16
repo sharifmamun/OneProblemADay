@@ -1,7 +1,7 @@
 public class Solution {
 
-    int[] array;
-    int[] original;
+    private int[] array;
+    private int[] original;
 
     public Solution(int[] nums) {
         array = nums;
